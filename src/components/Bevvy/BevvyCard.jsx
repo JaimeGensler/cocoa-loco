@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card } from 'antd';
-const { Meta } = Card;
+import { Card, Typography } from 'antd';
 
-export default function Portrait(props) {
+export default function BevvyCard(props) {
     return (
         <Card
             hoverable
@@ -12,14 +11,18 @@ export default function Portrait(props) {
                     alt={props.itemName ? props.itemName : 'Cocoa Image'}
                     src={props.imgURL}
                     style={{
-                        height: 250,
+                        height: 200,
                         objectFit: 'cover',
                     }}
                 />
             }
         >
-            <Meta title={props.itemName} />
-            <h1>Does this look okay?</h1>
+            <Typography.Title
+                level={3}
+                style={{ fontFamily: 'Dosis, sans-serif' }}
+            >
+                {props.itemName}
+            </Typography.Title>
         </Card>
     );
 }

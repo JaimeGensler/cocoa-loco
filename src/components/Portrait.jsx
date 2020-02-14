@@ -1,21 +1,25 @@
 import React from 'react';
-import { Card, Collapse } from 'antd';
+import { Card } from 'antd';
 const { Meta } = Card;
-const { Panel } = Collapse;
 
 export default function Portrait(props) {
     return (
         <Card
             hoverable
-            style={{ width: 240 }}
+            style={{ height: '100%', width: '100%' }}
             cover={
                 <img
                     alt={props.itemName ? props.itemName : 'Cocoa Image'}
                     src={props.imgURL}
+                    style={{
+                        height: 250,
+                        objectFit: 'cover',
+                    }}
                 />
             }
         >
             <Meta title={props.itemName} />
+            <h1>Does this look okay?</h1>
         </Card>
     );
 }

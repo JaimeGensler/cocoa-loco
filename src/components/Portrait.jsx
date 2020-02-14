@@ -16,13 +16,6 @@ export default function Portrait(props) {
             }
         >
             <Meta title={props.itemName} />
-            <Collapse
-                bordered={false}
-                expandIconPosition={'left'}
-                style={{ width: 50 }}
-            >
-                <Panel key="1">Ayy lm freaking ao</Panel>
-            </Collapse>
         </Card>
     );
 }

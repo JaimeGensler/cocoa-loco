@@ -11,7 +11,7 @@ export default function BevvyCard(props) {
                     alt={props.itemName ? props.itemName : 'Cocoa Image'}
                     src={props.imgURL}
                     style={{
-                        height: 200,
+                        height: 250,
                         objectFit: 'cover',
                     }}
                 />
@@ -23,6 +23,7 @@ export default function BevvyCard(props) {
             >
                 {props.itemName}
             </Typography.Title>
+            <Drawer></Drawer>
         </Card>
     );
 }

@@ -19,14 +19,7 @@ export default function BevvyList() {
             </Typography.Title>
             <div style={gridDisplay}>
                 {cocoaData.map((bevvy, i) => {
-                    return (
-                        <BevvyCard
-                            itemName={bevvy.itemName}
-                            imgURL={bevvy.imgURL}
-                            description={bevvy.description}
-                            key={i}
-                        />
-                    );
+                    return <BevvyCard {...bevvy} key={i} />;
                 })}
             </div>
         </div>

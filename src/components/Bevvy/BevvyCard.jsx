@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import { Card, Typography, Button, Icon, Drawer } from 'antd';
+import { Card } from 'antd';
+import BevvyTitle from './BevvyTitle';
+import BevvyDrawer from './BevvyDrawer';
+
+const cardStyle = {
+    height: '100%',
+    width: '100%',
+    overflow: 'hidden',
+    textAlign: 'center',
+    position: 'relative',
+};
 
 export default function BevvyCard(props) {
     const [visible, setVisible] = useState(false);
     return (
         <Card
             hoverable
-            style={{
-                height: '100%',
-                width: '100%',
-                overflow: 'hidden',
-                textAlign: 'center',
-            }}
+            style={cardStyle}
             cover={
                 <img
                     alt={props.itemName ? props.itemName : 'Cocoa Image'}
@@ -20,47 +25,8 @@ export default function BevvyCard(props) {
                 />
             }
         >
-            <Typography.Title
-                level={3}
-                style={{ fontFamily: 'Dosis, sans-serif' }}
-            >
-                {props.itemName}
-            </Typography.Title>
-            <div style={{ margin: '0 auto', width: 'auto' }}>
-                <Button
-                    onClick={() => {
-                        setVisible(true);
-                    }}
-                    icon="up"
-                >
-                    More Info
-                </Button>
-            </div>
-            <Drawer
-                title={props.itemName}
-                placement="bottom"
-                visible={visible}
-                getContainer={false}
-                onClose={() => {
-                    setVisible(false);
-                }}
-                style={{ position: 'absolute' }}
-            >
-                <p>{props.description}</p>
-                {console.log(props.description)}
-            </Drawer>
+            <BevvyTitle title={props.itemName} />
+            <BevvyDrawer {...props} />
         </Card>
     );
 }
-
-// <Drawer
-//     title="Basic Drawer"
-//     placement="right"
-//     closable={false}
-//     onClose={this.onClose}
-//     visible={this.state.visible}
-//     getContainer={false}
-//     style={{ position: 'absolute' }}
-// >
-//     <p>Some contents...</p>
-// </Drawer>;

@@ -1,12 +1,21 @@
 const cocoaData = [
     {
+        itemName: 'Standard House Cocoa',
+        imgURL:
+            'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1544042819%2Ffour-seasons-vail-colorado-HOTCOCO1218.jpg%3Fitok%3D2dEnNODU&w=400&c=sc&poi=face&q=85',
+        description:
+            'Our delicious house cocoa, made with milk chocolate and topped with a marshmallow.',
+        price: 3.0,
+        cocoaContent: 40,
+    },
+    {
         itemName: 'Peppermint White Chocolate Cocoa',
         imgURL:
             'https://www.gimmesomeoven.com/wp-content/uploads/2014/12/Peppermint-White-Hot-Chocolate-2.jpg',
         description:
             'Light, minty, and delicious peppermint cocoa topped with real peppermint chunks.',
         price: 3.25,
-        cocoaContent: 0,
+        cocoaContent: 25,
     },
     {
         itemName: 'Eggnog Cocoa',
@@ -14,7 +23,7 @@ const cocoaData = [
             'https://www.inkatrinaskitchen.com/wp-content/uploads/2016/11/Eggnog-Hot-Chocolate-10-wm-500.jpg?m',
         description: 'Eggnog-infused drink with white chocolate shavings.',
         price: 3.5,
-        cocoaContent: 0,
+        cocoaContent: 25,
     },
     {
         itemName: 'Gingerbread Cocoa',
@@ -32,7 +41,7 @@ const cocoaData = [
         description:
             'Our darkest cocoa in a rich, whole milk. Reminiscent of a moonless night.',
         price: 3.0,
-        cocoaContent: 100,
+        cocoaContent: 86,
     },
     {
         itemName: 'Espresso Cocoa',

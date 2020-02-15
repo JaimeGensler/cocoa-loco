@@ -5,7 +5,7 @@ import BevvyTitle from './BevvyTitle';
 export default function BevvyDrawer(props) {
     const [visible, setVisible] = useState(false);
     return (
-        <div>
+        <div style={{ marginTop: 20 }}>
             <Button
                 onClick={() => {
                     setVisible(true);
@@ -18,6 +18,7 @@ export default function BevvyDrawer(props) {
                 title={<BevvyTitle title={props.itemName} />}
                 placement="bottom"
                 visible={visible}
+                closable={false}
                 getContainer={false}
                 onClose={() => {
                     setVisible(false);
@@ -25,7 +26,12 @@ export default function BevvyDrawer(props) {
                 style={{ position: 'absolute' }}
             >
                 <p>{props.description}</p>
-                {console.log(props.description)}
+                <p>
+                    <span style={{ fontStyle: 'italic' }}>
+                        {props.cocoaContent}% cacao
+                    </span>
+                    {' | '}${props.price.toFixed(2)}
+                </p>
             </Drawer>
         </div>
     );

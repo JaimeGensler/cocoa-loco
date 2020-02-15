@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from 'antd';
 import BevvyTitle from './BevvyTitle';
 import BevvyDrawer from './BevvyDrawer';
@@ -9,10 +9,10 @@ const cardStyle = {
     overflow: 'hidden',
     textAlign: 'center',
     position: 'relative',
+    paddingBottom: 0,
 };
 
 export default function BevvyCard(props) {
-    const [visible, setVisible] = useState(false);
     return (
         <Card
             hoverable

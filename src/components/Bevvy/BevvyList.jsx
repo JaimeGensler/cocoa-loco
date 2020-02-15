@@ -15,7 +15,7 @@ export default function BevvyList() {
                 level={2}
                 style={{ fontFamily: 'Josefin Sans, sans-serif' }}
             >
-                Our Available Beverages
+                Our Available Bevvies
             </Typography.Title>
             <div style={gridDisplay}>
                 {cocoaData.map((bevvy, i) => {
@@ -23,6 +23,7 @@ export default function BevvyList() {
                         <BevvyCard
                             itemName={bevvy.itemName}
                             imgURL={bevvy.imgURL}
+                            description={bevvy.description}
                             key={i}
                         />
                     );

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Typography } from 'antd';
 import BevvyCard from './BevvyCard';
-import cocoaData from '../../cocoaData';
 
 const gridDisplay = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     gridGap: '2rem',
 };
-export default function BevvyList() {
+export default function BevvyList(props) {
     return (
         <div>
             <Typography.Title
@@ -18,7 +17,7 @@ export default function BevvyList() {
                 Our Available Bevvies
             </Typography.Title>
             <div style={gridDisplay}>
-                {cocoaData.map((bevvy, i) => {
+                {props.bevvies.map((bevvy, i) => {
                     return <BevvyCard {...bevvy} key={i} />;
                 })}
             </div>

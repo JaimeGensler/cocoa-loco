@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from 'antd';
+import SectionTitle from '../SectionTitle.jsx';
 import BevvyCard from './BevvyCard';
 
 const gridDisplay = {
@@ -10,12 +10,7 @@ const gridDisplay = {
 export default function BevvyList(props) {
     return (
         <div>
-            <Typography.Title
-                level={2}
-                style={{ fontFamily: 'Josefin Sans, sans-serif' }}
-            >
-                Our Available Bevvies
-            </Typography.Title>
+            <SectionTitle title="Our Available Bevvies" />
             <div style={gridDisplay}>
                 {props.bevvies.map((bevvy, i) => {
                     return <BevvyCard {...bevvy} key={i} />;

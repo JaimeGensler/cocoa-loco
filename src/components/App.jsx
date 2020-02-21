@@ -16,7 +16,13 @@ export default function App() {
             <Header>
                 <SiteHead />
             </Header>
-            <Content style={{ backgroundColor: '#f0f0f0', padding: '2rem' }}>
+            <Content
+                style={{
+                    backgroundColor: '#f0f0f0',
+                    padding: '2rem',
+                    minHeight: 'calc(100vh - 64px)',
+                }}
+            >
                 <Switch>
                     <Route
                         exact

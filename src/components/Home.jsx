@@ -1,6 +1,7 @@
 import React from 'react';
 import BevvyCard from './Bevvy/BevvyCard';
 import SectionTitle from './SectionTitle';
+import BevvyForm from './BevvyForm';
 
 export default function Home(props) {
     return (
@@ -10,6 +11,7 @@ export default function Home(props) {
                 <div style={{ width: '30%', margin: '0 auto' }}>
                     <BevvyCard {...props.daily} />
                 </div>
+                <BevvyForm />
             </div>
         </div>
     );

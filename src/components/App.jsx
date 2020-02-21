@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Layout } from 'antd';
 import { Switch, Route } from 'react-router-dom';
 
 import cocoaData from '../cocoaData';
-import BevvyList from './Bevvy/BevvyList';
+import BevvyController from './BevvyController';
 import SiteHead from './SiteHead.jsx';
 import Home from './Home.jsx';
 
@@ -34,19 +33,19 @@ export default function App() {
                     <Route
                         path="/white"
                         render={props => (
-                            <BevvyList {...props} bevvies={cocoaData.white} />
+                            <BevvyController {...props} bevvies="white" />
                         )}
                     />
                     <Route
                         path="/milk"
                         render={props => (
-                            <BevvyList {...props} bevvies={cocoaData.milk} />
+                            <BevvyController {...props} bevvies="milk" />
                         )}
                     />
                     <Route
                         path="/dark"
                         render={props => (
-                            <BevvyList {...props} bevvies={cocoaData.dark} />
+                            <BevvyController {...props} bevvies="dark" />
                         )}
                     />
                 </Switch>

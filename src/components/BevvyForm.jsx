@@ -61,13 +61,13 @@ export default function BevvyForm(props) {
                     placeholder="Price"
                     step={0.25}
                     value={price}
-                    onChange={e => setPrice(e.target.value)}
+                    onChange={e => setPrice(e)}
                 />
                 <InputNumber
                     placeholder="% content"
                     step={1}
                     value={cocoaContent}
-                    onChange={e => setCocoaContent(e.target.value)}
+                    onChange={e => setCocoaContent(e)}
                 />
                 <Button icon="coffee" size="large" htmlType="submit">
                     Add This Bevvy to the List!

@@ -46,6 +46,11 @@ export default function SiteHead() {
             </div>
             <ul style={navStyle}>
                 <li>
+                    <Link to="/new_bevvy" style={linkStyle}>
+                        Add New Drink
+                    </Link>
+                </li>
+                <li>
                     <Link to="/white" style={linkStyle}>
                         White
                     </Link>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as getUUID } from 'uuid';
 import { Form, Input, InputNumber, Button } from 'antd';
-import SectionTitle from './SectionTitle';
+import SectionTitle from '../SectionTitle';
 const { TextArea } = Input;
 
 export default function NewBevvyForm(props) {
@@ -18,10 +18,10 @@ export default function NewBevvyForm(props) {
             itemName,
             imgURL,
             description,
-            price,
+            price: price === '' ? 0 : price,
             cocoaContent,
         };
-        props.onNewPostSubmission(newBevvy);
+        props.onNewBevvySubmission(newBevvy);
         setItemName('');
         setImgURL('');
         setDescription('');
@@ -66,6 +66,8 @@ export default function NewBevvyForm(props) {
                 <InputNumber
                     placeholder="% content"
                     step={1}
+                    min={0}
+                    max={100}
                     value={cocoaContent}
                     onChange={e => setCocoaContent(e)}
                 />

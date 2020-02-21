@@ -6,7 +6,7 @@ import SiteHead from './SiteHead.jsx';
 import Home from './Home.jsx';
 import NewBevvyForm from './Bevvy/NewBevvyForm';
 import BevvyList from './Bevvy/BevvyList';
-import cocoaData from '../cocoaData';
+import { cocoaData } from '../cocoaData';
 
 const { Header, Content, Sider } = Layout;
 
@@ -20,73 +20,73 @@ export default class App extends React.Component {
     };
 
     render() {
-        <Layout>
-            <Header>
-                <SiteHead />
-            </Header>
-            <Content
-                style={{
-                    backgroundColor: '#f0f0f0',
-                    padding: '2rem',
-                    minHeight: 'calc(100vh - 64px)',
-                }}
-            >
-                <Switch>
-                    <Route
-                        exact
-                        path="/"
-                        render={props => (
-                            <Home {...props} daily={cocoaData[5]} />
-                        )}
-                    />
-                    <Route
-                        path="/new_bevvy"
-                        render={props => (
-                            <NewBevvyForm
-                                {...props}
-                                onNewBevvySubmission={this.handleNewBevvy}
-                            />
-                        )}
-                    />
-                    <Route
-                        path="/white"
-                        render={props => (
-                            <BevvyList
-                                {...props}
-                                bevvies={this.state.allBevvies.map(bev => {
-                                    if (bev.cocoaContent < 40) return bev;
-                                })}
-                            />
-                        )}
-                    />
-                    <Route
-                        path="/milk"
-                        render={props => (
-                            <BevvyList
-                                {...props}
-                                bevvies={this.state.allBevvies.map(bev => {
-                                    if (
-                                        bev.cocoaContent <= 70 &&
-                                        bev.cocoaContent >= 40
-                                    )
-                                        return bev;
-                                })}
-                            />
-                        )}
-                    />
-                    <Route
-                        path="/dark"
-                        render={props => (
-                            <BevvyList
-                                {...props}
-                                bevvies={this.state.allBevvies.map(bev => {
-                                    if (bev.cocoaContent >= 70) return bev;
-                                })}
-                            />
-                        )}
-                    />
-                </Switch>
-            </Content>
-        </Layout>;
+        return (
+            <Layout>
+                <Header>
+                    <SiteHead />
+                </Header>
+                <Content
+                    style={{
+                        backgroundColor: '#f0f0f0',
+                        padding: '2rem',
+                        minHeight: 'calc(100vh - 64px)',
+                    }}
+                >
+                    <Switch>
+                        <Route
+                            exact
+                            path="/"
+                            render={props => (
+                                <Home {...props} daily={cocoaData[5]} />
+                            )}
+                        />
+                        <Route
+                            path="/new_bevvy"
+                            render={props => (
+                                <NewBevvyForm
+                                    {...props}
+                                    onNewBevvySubmission={this.handleNewBevvy}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/white"
+                            render={props => (
+                                <BevvyList
+                                    {...props}
+                                    bevvies={this.state.allBevvies.filter(
+                                        bev => bev.cocoaContent < 40
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/milk"
+                            render={props => (
+                                <BevvyList
+                                    {...props}
+                                    bevvies={this.state.allBevvies.filter(
+                                        bev =>
+                                            bev.cocoaContent <= 70 &&
+                                            bev.cocoaContent >= 40
+                                    )}
+                                />
+                            )}
+                        />
+                        <Route
+                            path="/dark"
+                            render={props => (
+                                <BevvyList
+                                    {...props}
+                                    bevvies={this.state.allBevvies.filter(
+                                        bev => bev.cocoaContent >= 70
+                                    )}
+                                />
+                            )}
+                        />
+                    </Switch>
+                </Content>
+            </Layout>
+        );
     }
 }

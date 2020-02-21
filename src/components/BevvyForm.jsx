@@ -14,12 +14,12 @@ export default function BevvyForm(props) {
     function handleFormSubmit(e) {
         e.preventDefault();
         const newBevvy = {
+            id: getUUID(),
             itemName,
             imgURL,
             description,
             price,
             cocoaContent,
-            id: getUUID(),
         };
         props.onNewPostSubmission(newBevvy);
         setItemName('');
@@ -61,13 +61,13 @@ export default function BevvyForm(props) {
                     placeholder="Price"
                     step={0.25}
                     value={price}
-                    onChange={e => setPrice(e)}
+                    onChange={e => setPrice(e.target.value)}
                 />
                 <InputNumber
                     placeholder="% content"
                     step={1}
                     value={cocoaContent}
-                    onChange={e => setCocoaContent(e)}
+                    onChange={e => setCocoaContent(e.target.value)}
                 />
                 <Button icon="coffee" size="large" htmlType="submit">
                     Add This Bevvy to the List!

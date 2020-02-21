@@ -4,7 +4,7 @@ import { Form, Input, InputNumber, Button } from 'antd';
 import SectionTitle from './SectionTitle';
 const { TextArea } = Input;
 
-export default function BevvyForm(props) {
+export default function NewBevvyForm(props) {
     const [itemName, setItemName] = useState('');
     const [imgURL, setImgURL] = useState('');
     const [description, setDescription] = useState('');

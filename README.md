@@ -8,6 +8,8 @@
 
 _Cocoa Loco is a single page website built with React. It utilizes client-side routing and allows you to view different options for cocoa drinks! Features white chocolate cocoa, milk chocolate cocoa, and (the objectively superior in every single way) dark chocolate cocoa._
 
+![Structure of the React Components!](component_structure.jpg)
+
 ## Setup/Installation Requirements
 
 -   _Clone this github repository_

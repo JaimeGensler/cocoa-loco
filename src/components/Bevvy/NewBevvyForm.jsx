@@ -19,7 +19,7 @@ export default function NewBevvyForm(props) {
             imgURL,
             description,
             price: price === '' ? 0 : price,
-            cocoaContent,
+            cocoaContent: cocoaContent === '' ? 0 : cocoaContent,
         };
         props.onNewBevvySubmission(newBevvy);
         setItemName('');
@@ -71,6 +71,7 @@ export default function NewBevvyForm(props) {
                     value={cocoaContent}
                     onChange={e => setCocoaContent(e)}
                 />
+                <br />
                 <Button icon="coffee" size="large" htmlType="submit">
                     Add This Bevvy to the List!
                 </Button>

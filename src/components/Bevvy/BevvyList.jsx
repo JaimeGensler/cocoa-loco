@@ -12,9 +12,8 @@ export default function BevvyList(props) {
         <div>
             <SectionTitle title="Our Available Bevvies" />
             <div style={gridDisplay}>
-                {props.bevvies.map((bevvy, i) => {
-                    console.log(bevvy);
-                    return <BevvyCard {...bevvy} key={i} />;
+                {props.bevvies.map(bevvy => {
+                    return <BevvyCard {...bevvy} key={bevvy.id} />;
                 })}
             </div>
         </div>

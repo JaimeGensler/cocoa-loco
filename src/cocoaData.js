@@ -1,3 +1,4 @@
+import { v4 as getUUID } from 'uuid';
 export const cocoaData = [
     {
         itemName: 'Peppermint White Chocolate Cocoa',
@@ -7,6 +8,7 @@ export const cocoaData = [
             'Light, minty, and delicious peppermint cocoa topped with real peppermint chunks.',
         price: 3.25,
         cocoaContent: 25,
+        id: getUUID(),
     },
     {
         itemName: 'Eggnog Cocoa',
@@ -15,6 +17,7 @@ export const cocoaData = [
         description: 'Eggnog-infused drink with white chocolate shavings.',
         price: 3.5,
         cocoaContent: 25,
+        id: getUUID(),
     },
     {
         itemName: 'Alien Cocoa',
@@ -24,6 +27,7 @@ export const cocoaData = [
             'This cocoa’s out of this world- complete with whip, sprinkles, and candy eyes. Your friends will be green with envy!',
         price: 3.75,
         cocoaContent: 0,
+        id: getUUID(),
     },
     {
         itemName: 'Standard House Cocoa',
@@ -33,6 +37,7 @@ export const cocoaData = [
             'Our delicious house cocoa, made with milk chocolate and topped with a marshmallow.',
         price: 3.0,
         cocoaContent: 40,
+        id: getUUID(),
     },
     {
         itemName: 'Gingerbread Cocoa',
@@ -42,6 +47,7 @@ export const cocoaData = [
             'Smooth gingerbread-flavored cocoa topped with mini marshmallows and a whole gingerbread friend.',
         price: 3.75,
         cocoaContent: 50,
+        id: getUUID(),
     },
     {
         itemName: 'Gold Digger’s Cocoa',
@@ -50,6 +56,7 @@ export const cocoaData = [
         description: 'Milk chocolate cocoa with real gold leaf.',
         price: 55.0,
         cocoaContent: 40,
+        id: getUUID(),
     },
     {
         itemName: 'Frozen Cocoa',
@@ -59,6 +66,7 @@ export const cocoaData = [
             'For days when it’s just too warm for regular cocoa, try our blended frozen cocoa.',
         price: 4.25,
         cocoaContent: 60,
+        id: getUUID(),
     },
     {
         itemName: 'Pumpkin Spice Hot Cocoa',
@@ -68,6 +76,7 @@ export const cocoaData = [
             'Cozy cocoa with pumpkin spice topped with whip and fall sprinkles.',
         price: 3.5,
         cocoaContent: 60,
+        id: getUUID(),
     },
     {
         itemName: 'Salted Peanut Butter Cocoa',
@@ -77,6 +86,7 @@ export const cocoaData = [
             'Deliciously rich peanut butter cocoa topped with sea salt, peanut butter cups, and real peanut butter.',
         price: 6.2,
         cocoaContent: 62,
+        id: getUUID(),
     },
     {
         itemName: 'Mexican Cocoa',
@@ -86,6 +96,7 @@ export const cocoaData = [
             'Just like abuelita used to make: warm, rich, cocoa with a kick of cinnamon and cayenne.',
         price: 3.25,
         cocoaContent: 75,
+        id: getUUID(),
     },
     {
         itemName: 'Midnight Cocoa',
@@ -95,6 +106,7 @@ export const cocoaData = [
             'Our darkest cocoa in a rich, whole milk. Reminiscent of a moonless night.',
         price: 3.0,
         cocoaContent: 86,
+        id: getUUID(),
     },
     {
         itemName: 'Espresso Cocoa',
@@ -104,6 +116,7 @@ export const cocoaData = [
             'Hot cocoa made with espresso. Topped with whipped cream, chocolate shavings, and chocolate-covered espresso beans.',
         price: 4.0,
         cocoaContent: 80,
+        id: getUUID(),
     },
     {
         itemName: 'Jaime’s Cocoa',
@@ -112,6 +125,7 @@ export const cocoaData = [
         description: 'House blend of cocoa, maple, cinnamon, and love.',
         price: 3.5,
         cocoaContent: 75,
+        id: getUUID(),
     },
     {
         itemName: 'Valentine’s Cocoa',
@@ -120,5 +134,6 @@ export const cocoaData = [
         description: 'Cocoa for you to share with that special someone.',
         price: 7.25,
         cocoaContent: 70,
+        id: getUUID(),
     },
 ];
